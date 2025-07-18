@@ -5,10 +5,10 @@ Designed to help you manage multiple task lists and tasks with ease.
 ---
 
 ## 🎯 Features
-- Create, view, and delete multiple task lists 🗂 
-- Add, view, and delete tasks with name, description, and importance 🔍 
-- Import and export task lists and tasks as CSV files for easy backup and sharing 📤📥 
-- Clear, text-based menus and prompts for straightforward interaction 💡 
+- 🗂 Create, view, and delete multiple task lists  
+- 🔍 Add, view, and delete tasks with name, description, and importance 
+- 📤📥 Import and export task lists and tasks as CSV files for easy backup and sharing 
+- 💡 Clear, text-based menus and prompts for straightforward interaction 
 
 ---
 
