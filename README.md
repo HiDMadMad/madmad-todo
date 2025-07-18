@@ -1,6 +1,6 @@
 # 📝 MadMad ToDo App
 
-A simple and interactive command-line ToDo app built with Python.  
+A simple and interactive CLI-based ToDo app built with Python.  
 Designed to help you manage multiple task lists and tasks with ease.
 
 ---
