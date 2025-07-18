@@ -47,12 +47,13 @@ MESSAGES = {"first welcome":"\nwelcome to MadMad's ToDo app <3\n",
 
 class Task():
     id_counter = 0
-    def __init__(self, name:str, description:str, importance:int):
+    def __init__(self, name:str, description:str, importance:int, task_status:bool=False):
         self.name = name
         self.description = description
         self.importance = importance
         Task.id_counter += 1
         self.id = Task.id_counter
+        
 
     def __str__(self):
         return f"{self.id}. {self.name} : {self.description} ({self.importance})\n\n"
@@ -93,6 +94,13 @@ class TaskList():
     def import_from_csv(self):
         pass
 
+    def mark_completed_task(self):
+        pass
+
+    def search_tasks_as(self): # as importance, id, name
+        pass
+
+
 
 
 #================ functions ================#
@@ -113,4 +121,4 @@ def get_task_values(task_list):
             task_list.import_from_csv()
         case _:
             print(MESSAGES["wrong input"])
-#MadMad_116
+#MadMad_124
