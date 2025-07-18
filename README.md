@@ -31,7 +31,7 @@ python app.py
 ---
 
 ## 🛠️ Current Status
-✔ Core features are implemented
+✔ Core features are implemented<br>
 👨‍💻 More improvements are under development..
 
 ---
