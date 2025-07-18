@@ -1,12 +1,10 @@
 # 📝 MadMad ToDo App
-
 A simple and interactive CLI-based ToDo app built with Python.  
 Designed to help you manage multiple task lists and tasks with ease.
 
 ---
 
 ## 🎯 Features
-
 - Create, view, and delete multiple task lists 🗂 
 - Add, view, and delete tasks with name, description, and importance 🔍 
 - Import and export task lists and tasks as CSV files for easy backup and sharing 📤📥 
@@ -18,7 +16,7 @@ Designed to help you manage multiple task lists and tasks with ease.
 
     The app lets you create task lists, each containing multiple tasks.
 
-    Tasks have unique IDs and include a name, description, and importance level.
+    Each task has a unique ID, name, description, and importance level
 
     You can manage tasks and task lists through simple menu options.
 
@@ -45,5 +43,5 @@ python app.py
 ---
 
 ## 🙏 Contributions
-
-Contributions, bug reports, and suggestions are welcome! Feel free to open issues or submit pull requests
+Feedback, ideas, and pull requests are welcome!
+Feel free to open an issue or contribute.
