@@ -1,4 +1,8 @@
-import todo_module as tm
+import models as tm  # tm : todo-models
+import ui
 
-TaskManager = tm.TaskList()
-#MadMad_4
+# ui.app_starter()
+# ui.show_main_menu()
+# user_request = input(">> ")
+
+#MadMad_8
