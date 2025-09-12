@@ -52,59 +52,81 @@ class TaskList():
         else:
             result = f"{self.name}:\n"
             for task in self.list_of_tasks:
-                result+=str(task)
+                result+=('\t'+str(task))
             return f"{result}\n"
     
-    def search_by_name_in_tl(self, task_name:str):  # tl : task-list
+    def find_by_name_in_tl(self, t_name:str):  # tl : task-list
         if(len(self.list_of_tasks)<=0):
-            return Status.EMPTY #  print("list was empty. go and add some tasks to it!")  IN UI.PY
-        else: 
-            # for i in range(len(self.list_of_tasks)):
-            #     if(self.list_of_tasks[i].name == task_name):
-            #         return i
-            for index, task in enumerate(self.list_of_tasks):
-                if(task.name == task_name):
-                    return index
-            else:
-                return Status.NOT_FOUND #  print(f"task \"{task_name}\" was not found")  #  OR print(f' "{variable}"  ')  IN UI.PY
+            return Status.EMPTY #  print("list was empty. go and add some tasks to it!")  IN UI.PY 
+        # for i in range(len(self.list_of_tasks)):
+        #     if(self.list_of_tasks[i].name == t_name):
+        #         return i
+        for index, task in enumerate(self.list_of_tasks):
+            if(task.name == t_name):
+                return index
+        else:
+            return Status.NOT_FOUND #  print(f"task \"{t_name}\" was not found")  #  OR print(f' "{variable}"  ')  IN UI.PY
 
-    def search_by_id_in_tl(self, task_id:any):
+    def find_by_id_in_tl(self, t_id:any):
         if(len(self.list_of_tasks)<=0):
             return Status.EMPTY  #  print("list was empty. go and add some tasks to it!")  IN UI.PY
-        else: 
-            # for i in range(len(self.list_of_tasks)):
-            #     if(self.list_of_tasks[i].id == int(task_id)):
-            #         return i
-            for index, task in enumerate(self.list_of_tasks):
-                if(task.id == task_id):
-                    return index
-            else:
-                return Status.NOT_FOUND #  print(f"task with ID:{task_id} was not found")  IN UI.PY
+        # for i in range(len(self.list_of_tasks)):
+        #     if(self.list_of_tasks[i].id == int(t_id)):
+        #         return i
+        for index, task in enumerate(self.list_of_tasks):
+            if(task.id == t_id):
+                return index
+        else:
+            return Status.NOT_FOUND #  print(f"task with ID:{t_id} was not found")  IN UI.PY
 
     def add_task(self, task:Task):
-        result = self.search_by_name_in_tl(task.name)
+        result = self.find_by_name_in_tl(task.name)
         if(not isinstance(result, Status)):  # type(result)!=Status
             return Status.DUPLICATE #  print(f"task with name \"{task.name}\" already exists!\n")
         self.list_of_tasks.append(task)
         return Status.SUCCESS
     
-    def delete_task_by_id(self, task_id:any):
-        result = self.search_by_id_in_tl(task_id) 
+    def delete_task_by_id(self, t_id:any):
+        result = self.find_by_id_in_tl(t_id) 
         if(not isinstance(result, Status)):  # type(result)!=Status
             del self.list_of_tasks[result]
             return Status.SUCCESS
         return Status.NOT_FOUND
     
-    def delete_task_by_name(self, task_name:str):
-        result = self.search_by_name_in_tl(task_name) 
+    def delete_task_by_name(self, t_name:str):
+        result = self.find_by_name_in_tl(t_name) 
         if(not isinstance(result, Status)):  # type(result)!=Status
             del self.list_of_tasks[result]
             return Status.SUCCESS
         return Status.NOT_FOUND
-
+    
         
-class Manager():
+class ToDoManager():
+    
     def __init__(self):
-        pass
+        self.list_of_task_lists = []
+    
+    def find_task_list(self, tl_name:str):
+        if(len(self.list_of_task_lists)<=0):
+            return Status.EMPTY
+        for index, task_list in enumerate(self.list_of_task_lists):
+            if(task_list.name == tl_name):
+                return index
+        else:
+            return Status.NOT_FOUND
 
-#MadMad_110
+    def add_task_list(self, task_list:TaskList):
+        result = self.find_task_list(task_list.name)
+        if(not isinstance(result, Status)):
+            return Status.DUPLICATE
+        self.list_of_task_lists.append(task_list)
+        return Status.SUCCESS
+    
+    def delete_task_list(self, tl_name:str):
+        result = self.find_task_list(tl_name)
+        if(not isinstance(result, Status)):
+            del self.list_of_task_lists[result]
+            return Status.SUCCESS
+        return Status.NOT_FOUND
+
+#MadMad_132
