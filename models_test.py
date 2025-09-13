@@ -75,13 +75,13 @@ class TestFullSystem(unittest.TestCase):
         result = self.task1.change_importance(5)
         self.assertEqual(result, Status.DUPLICATE)
 
-    # ------------------ TASKLIST TESTS ------------------
+    # ------------------ TASK-LIST TESTS ------------------
 
-    def test_tasklist_str_empty(self):
+    def test_task_list_str_empty(self):
         empty_list = TaskList("EmptyList")
         self.assertIn("(empty)", str(empty_list))
 
-    def test_tasklist_str_with_tasks(self):
+    def test_task_list_str_with_tasks(self):
         self.task_list.add_task(self.task1)
         self.assertIn("Task1", str(self.task_list))
 
@@ -137,7 +137,7 @@ class TestFullSystem(unittest.TestCase):
         result = self.task_list.delete_task_by_name("Ghost")
         self.assertEqual(result, Status.NOT_FOUND)
 
-    # ------------------ TODOMANAGER TESTS ------------------
+    # ------------------ TODO-MANAGER TESTS ------------------
 
     def test_manager_str_empty(self):
         self.assertIn("(empty)", str(self.manager))
