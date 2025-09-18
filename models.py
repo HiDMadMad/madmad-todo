@@ -36,7 +36,8 @@ class Task():
         return self.task_status
 
     def is_complete(self):
-        return Status.COMPLETED if self.task_status==Status.COMPLETED else Status.NOT_COMPLETED
+        #return Status.COMPLETED if self.task_status==Status.COMPLETED else Status.NOT_COMPLETED
+        return True if self.task_status==Status.COMPLETED else False
     
     def change_name(self, new_name:str):  # must be checked in app.py or ui.py (str)
         if(self.name != new_name):
@@ -66,9 +67,12 @@ class Task():
 
 
 class TaskList():
+    task_list_id_counter = 0
     def __init__(self, name:str):
         self.list_of_tasks = []
         self.name = name
+        TaskList.task_list_id_counter+=1
+        self.id = TaskList.task_list_id_counter
     
     def __str__(self):
         if(len(self.list_of_tasks)<=0):
@@ -81,7 +85,7 @@ class TaskList():
     
     def find_by_name_in_tl(self, t_name:str):  # tl : task-list
         if(len(self.list_of_tasks)<=0):
-            return Status.EMPTY  # "list was empty. go and add some tasks to it!" IN ui.py or app.py
+            return Status.EMPTY
         # for i in range(len(self.list_of_tasks)):
         #     if(self.list_of_tasks[i].name == t_name):
         #         return i
@@ -89,7 +93,7 @@ class TaskList():
             if(task.name == t_name):
                 return index
         else:
-            return Status.NOT_FOUND  # f"task \"{t_name}\" was not found.") OR f' "{variable}" .') IN ui.py or app.py
+            return Status.NOT_FOUND
 
     def find_by_id_in_tl(self, t_id:any):
         if(len(self.list_of_tasks)<=0):
@@ -105,7 +109,7 @@ class TaskList():
     def add_task(self, task:Task):
         result = self.find_by_name_in_tl(task.name)
         if(not isinstance(result, Status)):  # type(result)!=Status --> result==index_of_a_task
-            return Status.DUPLICATE  # f"task with name \"{task.name}\" already exists!\n")
+            return Status.DUPLICATE
         self.list_of_tasks.append(task)
         return Status.SUCCESS
     
@@ -134,11 +138,11 @@ class ToDoManager():
         result = ""
         for task_list in self.list_of_task_lists:
             result+=('   '+str(task_list))
-        return f"over view :\n{result}\n"
+        return f"\nover view :\n{result}\n"
 
     def find_task_list(self, tl_name:str):
         if(len(self.list_of_task_lists)<=0):
-            return Status.EMPTY  # "your directory is empty from task list!"
+            return Status.EMPTY
         for index, task_list in enumerate(self.list_of_task_lists):
             if(task_list.name == tl_name):
                 return index
@@ -159,4 +163,4 @@ class ToDoManager():
             return Status.SUCCESS
         return Status.NOT_FOUND
 
-#MadMad_162
+#MadMad_166
