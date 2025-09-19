@@ -3,10 +3,12 @@ class Status(Enum):
     NOT_COMPLETED = 0  # False
     COMPLETED = 1  # True
     SUCCESS = 2
+    CONTINUE = 3
     # all numbers lower than zero are error codes
     ERROR = -1
     DUPLICATE = -2
     EMPTY = -3
+    STOP = -4
     NOT_FOUND = -404
 
 
@@ -134,7 +136,7 @@ class ToDoManager():
 
     def __str__(self):
         if(len(self.list_of_task_lists)<=0):
-            return "(empty)\n"
+            return "\nover view :\n   (empty)\n"
         result = ""
         for task_list in self.list_of_task_lists:
             result+=('   '+str(task_list))
@@ -163,4 +165,4 @@ class ToDoManager():
             return Status.SUCCESS
         return Status.NOT_FOUND
 
-#MadMad_166
+#MadMad_168

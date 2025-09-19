@@ -21,10 +21,10 @@ PROGRESS = {
 
 
 MESSAGES = {
-    "first welcome" : "welcome to MadMad's ToDo app!\n",
+    "first welcome" : "hi {}, welcome to MadMad's ToDo app!\n",
     "continued" : "\nwhat do you want to do now?",
     #-------------------------------------------MENUS--------------------------------------------
-    "main menu" : "\n1.create task list\n2.show task lists\n3.open task list\
+    "main menu" : "\n1.create task list\n2.display task lists\n3.open task list\
                    \n4.delete task list\n5.export as Excel\n6.export as CSV\n7.import from CSV\
                    \n8.exit\n",
 
@@ -39,13 +39,13 @@ MESSAGES = {
                      \ngo to your room and think about your mistakes :)\n\n",
     #-------------------------------------TASK LIST INPUTS---------------------------------------
     "tl name input" : "\nenter the name of task list :\n>> ",
-    "tl name input again" : "do you want to enter name again?(Y/N) ",
+    "tl name input again" : "do you want to enter name again?(y/n) ",
     #-------------------------------------TASK LIST ERRORS---------------------------------------
-    "tl duplicated" : "task list name you input already exists! enter another one.\n",
-    "tl not found" : "task list {} was not found.\n",  # .format()
+    "tl duplicated" : "task list \"{}\" already exists!\n",
+    "tl not found" : "task list \"{}\" was not found.\n",
     #-------------------------------------TASK LIST OUTPUTS--------------------------------------
-    "tl added" : "your task list was added successfully!\n",
-    "tl deleted" : "your task list was deleted successfully!\n",
+    "tl added" : "task list \"{}\" was added successfully!\n",
+    "tl deleted" : "task list \"{}\" was deleted successfully!\n",
     "tl imported" : "your task lists were imported successfully!\n",
     "tl exported" : "your task lists were exported successfully!\n",
 #✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔
@@ -63,10 +63,10 @@ MESSAGES = {
     "wrong importance" : "wrong importance value. importance must be an integer between 1 and 10.\n",
     "empty task list" : "list was empty. go and add some tasks to it!\n",
     "empty directory" : "your directory is empty from task list!",
-    "task not found" : "task \"{}\" was not found.\n",  # .format()
-    "task list not found" : "task list \"{}\" was not found.\n",  # .format()
-    "duplicate task" : "task with name \"{}\" already exists!\n",  # .format()
-    "duplicate task list" : "task list with name \"{}\" already exists!\n",  # .format()
+    "task not found" : "task \"{}\" was not found.\n",
+    "task list not found" : "task list \"{}\" was not found.\n",
+    "duplicate task" : "task with name \"{}\" already exists!\n",
+    "duplicate task list" : "task list with name \"{}\" already exists!\n",
     #-----------------------------------------WARNINGS-------------------------------------------
     "importance warning" : "importance must be an integer between 1 to 10",
     "":""
