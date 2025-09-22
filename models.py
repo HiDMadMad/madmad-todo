@@ -28,7 +28,7 @@ class Task():
         self.id = Task.task_id_counter
         
     def __str__(self):
-        return f"{self.id}. {self.name} ({self.importance}/{Task.max_importance}) [{self.task_status.name}] : {self.description}\n"
+        return f"{self.id}.{self.name} ({self.importance}/{Task.max_importance}) [{self.task_status.name}] : \"{self.description}\"\n"
 
     def change_status(self):
         if(self.task_status == Status.NOT_COMPLETED):
@@ -85,51 +85,51 @@ class TaskList():
                 result+=('\t'+str(task))
             return f"{result}\n"
     
-    def find_by_name_in_tl(self, t_name:str):  # tl : task-list
+    def find_task(self, t_name:str):  # tl : task-list
         if(len(self.list_of_tasks)<=0):
             return Status.EMPTY
         # for i in range(len(self.list_of_tasks)):
         #     if(self.list_of_tasks[i].name == t_name):
         #         return i
-        for index, task in enumerate(self.list_of_tasks):
+        for task in self.list_of_tasks:
             if(task.name == t_name):
-                return index
+                return task
         else:
             return Status.NOT_FOUND
 
-    def find_by_id_in_tl(self, t_id:any):
-        if(len(self.list_of_tasks)<=0):
-            return Status.EMPTY
-        for index, task in enumerate(self.list_of_tasks):
-            if(task.id == t_id):
-                return index
-        else:
-            return Status.NOT_FOUND
-        # if a non-integer is entered instead of the ID, it raises an error
-        # it's will be checked in ui.py or app.py
+    # def find_by_id_in_tl(self, t_id:any):
+    # if(len(self.list_of_tasks)<=0):
+    #     return Status.EMPTY
+    # for task in self.list_of_tasks:
+    #     if(task.id == t_id):
+    #         return task
+    # else:
+    #     return Status.NOT_FOUND
+    # # if a non-integer is entered instead of the ID, it raises an error
+    # # it's will be checked in ui.py or app.py
 
     def add_task(self, task:Task):
-        result = self.find_by_name_in_tl(task.name)
+        result = self.find_task(task.name)
         if(not isinstance(result, Status)):  # type(result)!=Status --> result==index_of_a_task
             return Status.DUPLICATE
         self.list_of_tasks.append(task)
         return Status.SUCCESS
     
-    def delete_task_by_id(self, t_id:any):
-        result = self.find_by_id_in_tl(t_id) 
+    def delete_task(self, t_name:str):
+        result = self.find_task(t_name) 
         if(not isinstance(result, Status)):
-            del self.list_of_tasks[result]  # result is index --> so function is found it --> so it deletes it
+            self.list_of_tasks.remove(result)
             return Status.SUCCESS
         return Status.NOT_FOUND
     
-    def delete_task_by_name(self, t_name:str):
-        result = self.find_by_name_in_tl(t_name) 
-        if(not isinstance(result, Status)):
-            del self.list_of_tasks[result]
-            return Status.SUCCESS
-        return Status.NOT_FOUND
-    
+    # def delete_task_by_id(self, t_id:any):
+    #     result = self.find_by_id_in_tl(t_id) 
+    #     if(not isinstance(result, Status)):
+    #         del self.list_of_tasks[result]  # result is index --> so function is found it --> so it deletes it
+    #         return Status.SUCCESS
+    #     return Status.NOT_FOUND
         
+
 class ToDoManager():
     def __init__(self):
         self.list_of_task_lists = []
@@ -139,15 +139,24 @@ class ToDoManager():
             return "\nover view :\n   (empty)\n"
         result = ""
         for task_list in self.list_of_task_lists:
-            result+=('   '+str(task_list))
+            result+=('  '+str(task_list))
         return f"\nover view :\n{result}\n"
+
+    def display_tl_names(self):
+        if(len(self.list_of_task_lists)<=0):
+            print("(empty)")
+            return Status.EMPTY
+        else:
+            for tl in self.list_of_task_lists:
+                print(f"-{tl}", end='')
+            return Status.SUCCESS
 
     def find_task_list(self, tl_name:str):
         if(len(self.list_of_task_lists)<=0):
             return Status.EMPTY
-        for index, task_list in enumerate(self.list_of_task_lists):
+        for task_list in self.list_of_task_lists:
             if(task_list.name == tl_name):
-                return index
+                return task_list
         else:
             return Status.NOT_FOUND
 
@@ -161,8 +170,8 @@ class ToDoManager():
     def delete_task_list(self, tl_name:str):
         result = self.find_task_list(tl_name)
         if(not isinstance(result, Status)):
-            del self.list_of_task_lists[result]
+            self.list_of_task_lists.remove(result)
             return Status.SUCCESS
         return Status.NOT_FOUND
 
-#MadMad_168
+#MadMad_177
