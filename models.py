@@ -43,8 +43,6 @@ class Task:
         return self.task_status==Status.COMPLETED
         
     def change_task_description(self, new_description:str) -> Status:
-        if(len(new_description)<=0):
-            return Status.EMPTY
         if(self.description != new_description):
             self.description = new_description
             return Status.SUCCESS
@@ -170,4 +168,4 @@ class ToDoManager:
                 "list_of_tasklists": [tl.tasklist_to_dict() for tl in self.list_of_tasklists]
                }
 
-#MadMad_173
+#MadMad_171
