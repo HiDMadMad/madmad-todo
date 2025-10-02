@@ -19,14 +19,17 @@ Designed to help you manage multiple task lists and tasks with ease.
 - 📥 JSON-based data persistence
 - 🎨 clean, text-based UI with intuitive menus
 
-main menu :
-![main menu](assets/screen-shots/main_menu.png)
+---
 
-task list menu :
-![tl menu](assets/screen-shots/tl_menu.png)
+## 📺 Screenshots
+### Main menu
+![Main menu — محیط اصلی](assets/screen-shots/main_menu.png)
 
-task menu :
-![t menu](assets/screen-shots/t_menu.png)
+### Task list menu
+![Task list menu — منوی لیست‌ها](assets/screen-shots/tl_menu.png)
+
+### Task menu
+![Task menu — منوی تسک](assets/screen-shots/t_menu.png)
 
 ---
 
