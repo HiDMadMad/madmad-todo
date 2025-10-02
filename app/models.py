@@ -26,7 +26,7 @@ class Task:
         self.importance = importance
         
     def __str__(self) -> str:
-        return f"{self.name} ({self.importance}/{Task.max_importance}) [{self.task_status.name}] : \"{self.description}\"\n"
+        return f" {self.name} ({self.importance}/{Task.max_importance}) [{self.task_status.name}] : \"{self.description}\"\n"
 
     def change_status(self) -> Status:
         if(self.task_status == Status.NOT_COMPLETED):
@@ -65,7 +65,7 @@ class Task:
                 "importance": self.importance,
                 "task_status": self.task_status.value
                 }
-
+    
 
 class TaskList:
     def __init__(self, name:str) -> None:
@@ -74,9 +74,9 @@ class TaskList:
         
     def __str__(self) -> str:
         if(len(self.list_of_tasks)<=0):
-            return f"{self.name}: (empty)\n"
+            return f" {self.name}: (empty)\n"
         else:
-            result = f"{self.name}:\n"
+            result = f" {self.name}:\n"
             for task in self.list_of_tasks:
                 result+=('\t'+str(task))
             return f"{result}\n"
@@ -125,11 +125,11 @@ class ToDoManager:
 
     def __str__(self) -> str:
         if(len(self.list_of_tasklists)<=0):
-            return "\nover view :\n   (empty)\n"
+            return "\n over view :\n   (empty)\n"
         result = ""
         for tasklist in self.list_of_tasklists:
             result+=(str(tasklist))
-        return f"\nover view :\n{result}\n"
+        return f" over view :\n{result}\n"
 
     def find_tasklist(self, tl_name:str) -> Union[TaskList, Status]:
         if(len(self.list_of_tasklists)<=0):
@@ -168,4 +168,8 @@ class ToDoManager:
                 "list_of_tasklists": [tl.tasklist_to_dict() for tl in self.list_of_tasklists]
                }
 
-#MadMad_171
+
+if(__name__ == '__main__'):
+    print("\nuse this file as module.\n")
+
+#MadMad_175

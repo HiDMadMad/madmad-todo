@@ -1,0 +1,35 @@
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# virtual environment
+venv/
+env/
+ENV/
+.venv
+
+# data files
+app/data/your_todo_data.json
+app/data/your_todo_data.json.backup
+app/data/exported_data/*
+
+# keep directory structure but ignore contents
+!app/data/exported_data/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# logs
+*.log
