@@ -22,13 +22,13 @@ Designed to help you manage multiple task lists and tasks with ease.
 ---
 
 ## 📺 Screenshots
-### Main menu
+### main menu
 ![Main menu — محیط اصلی](assets/screen-shots/main_menu.png)
 
-### Task list menu
+### task list menu
 ![Task list menu — منوی لیست‌ها](assets/screen-shots/tl_menu.png)
 
-### Task menu
+### task menu
 ![Task menu — منوی تسک](assets/screen-shots/t_menu.png)
 
 ---
