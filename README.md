@@ -60,49 +60,48 @@ python app/app.py
 ---
 
 ## 📖 Quick Start
-1.run the app: python app/app.py
-2.press 1 to create your first task list
-3.enter a name ("Work Tasks")
-4.press 3 to open the task list
-5.press 1 to add your first task
-6.enter task details (name, description, importance)
-7.press 8 to save and exit
+1. run the app: python app/app.py
+2. press 1 to create your first task list
+3. enter a name ("Work Tasks")
+4. press 3 to open the task list
+5. press 1 to add your first task
+6. enter task details (name, description, importance)
+7. press 8 to save and exit
 
 ---
 
 ## 🛠️ Current Status
 
-✔ core features are implemented
+✔ core features are implemented <br>
 👨‍💻 more features are still in development
 
 ---
 
 ## 📁 Project Structure
-
-madmad-todo/
-├── app/
-│   ├── app.py           # main entry point
-│   ├── models.py        # data models
-│   ├── ui.py            # user interface
-│   ├── messages.py      # all messages
-│   └── data/  
-│       ├── your_todo_data.json
-│       └── exported_data/
-├── assets/
-│   └── screen-shots/
-├── .gitignore
-├── LICENSE
-├── README.md
-└── requirements.txt
+madmad-todo/ <br>
+├── app/ <br>
+│   ├── app.py           # main entry point <br>
+│   ├── models.py        # data models <br>
+│   ├── ui.py            # user interface <br>
+│   ├── messages.py      # all messages <br>
+│   └── data/ <br>
+│       ├── your_todo_data.json <br>
+│       └── exported_data/ <br>
+├── assets/ <br>
+│   └── screen-shots/ <br>
+├── .gitignore <br>
+├── LICENSE <br>
+├── README.md <br>
+└── requirements.txt <br>
 
 ---
 
 ## 🙏 Contributions
-feedback, ideas, and pull requests are welcome!
+feedback, ideas, and pull requests are welcome! <br>
 feel free to open an issue or contribute.
 
 ---
 
 ## 📜 License
-this project is licensed under the MIT License
+this project is licensed under the MIT License <br>
 copyright © 2025 HiDMadMad
