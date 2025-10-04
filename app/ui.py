@@ -368,7 +368,7 @@ def save_data(td_manager:ToDoManager):
 def load_data(td_manager:ToDoManager):
     try:
         if not os.path.exists(DATA_FILE):
-            display_returned_message("No saved data found. Starting fresh.")
+            display_returned_message(msg["data not found"])
             return Status.NOT_FOUND
         with open(DATA_FILE, 'r', encoding='utf-8') as f:
             data = json.load(f)

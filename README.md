@@ -60,7 +60,7 @@ python app/app.py
 ---
 
 ## 📖 Quick Start
-1. run the app: python app/app.py
+1. run the app: `python app/app.py`
 2. press 1 to create your first task list
 3. enter a name ("Work Tasks")
 4. press 3 to open the task list
@@ -78,21 +78,23 @@ python app/app.py
 ---
 
 ## 📁 Project Structure
-madmad-todo/ <br>
-├── app/ <br>
-│   ├── app.py           # main entry point <br>
-│   ├── models.py        # data models <br>
-│   ├── ui.py            # user interface <br>
-│   ├── messages.py      # all messages <br>
-│   └── data/ <br>
-│       ├── your_todo_data.json <br>
-│       └── exported_data/ <br>
-├── assets/ <br>
-│   └── screen-shots/ <br>
-├── .gitignore <br>
-├── LICENSE <br>
-├── README.md <br>
-└── requirements.txt <br>
+```
+madmad-todo/
+├── app/
+│   ├── app.py           # main entry point
+│   ├── models.py        # data models
+│   ├── ui.py            # user interface
+│   ├── messages.py      # all messages
+│   └── data/
+│       ├── your_todo_data.json
+│       └── exported_data/
+├── assets/
+│   └── screen-shots/
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
+```
 
 ---
 
