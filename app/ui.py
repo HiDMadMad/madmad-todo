@@ -20,7 +20,7 @@ NCOMP = '[ ]'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 DATA_FILE = os.path.join(DATA_DIR, "your_todo_data.json")
-DEFAULT_PATH = os.path.join(DATA_DIR, "exported_data")
+DEFAULT_PATH = os.path.join(DATA_DIR, "exported-data")
 
 
 
