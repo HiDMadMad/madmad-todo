@@ -88,8 +88,8 @@ check-mate/
 │       └── exported_data/
 ├── assets/
 │   └── screen-shots/
-        ├── v0.1.0
-        └── v0.2.0
+|       ├── v0.1.0
+|       └── v0.2.0
 ├── .gitignore
 ├── LICENSE
 ├── README.md
