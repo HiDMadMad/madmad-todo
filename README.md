@@ -20,11 +20,9 @@ designed to help you manage multiple task lists and tasks with ease.
 ---
 
 ## Screenshots
-<p align="center">
-  <img src="assets/screen-shots/v0.2.0/main_menu.png" width="30%" title="main menu"/>
-  <img src="assets/screen-shots/v0.2.0/tl_menu.png" width="30%" />
-  <img src="assets/screen-shots/v0.2.0/t_menu.png" width="30%" />
-</p>
+| Main Menu | Task List Menu | Task Menu |
+|:---:|:---:|:---:|
+| <img src="assets/screen-shots/v0.2.0/main_menu.png" width="300" /> | <img src="assets/screen-shots/v0.2.0/tl_menu.png" width="300" /> | <img src="assets/screen-shots/v0.2.0/t_menu.png" width="300" /> |
 
 ---
 
