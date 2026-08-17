@@ -41,7 +41,7 @@ designed to help you manage multiple task lists and tasks with ease.
 ## Installation
 ```bash
 # clone the repository
-git clone https://github.com/HiDMadMad/check-mate.git
+git clone https://github.com/0xMadMad/check-mate.git
 cd check-mate
 
 # install dependencies
