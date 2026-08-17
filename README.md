@@ -20,14 +20,11 @@ designed to help you manage multiple task lists and tasks with ease.
 ---
 
 ## Screenshots
-### main menu
-![Main menu — محیط اصلی](assets/screen-shots/v0.2.0/main_menu.png)
-
-### task list menu
-![Task list menu — منوی لیست‌ها](assets/screen-shots/v0.2.0/tl_menu.png)
-
-### task menu
-![Task menu — منوی تسک](assets/screen-shots/v0.2.0/t_menu.png)
+<p align="center">
+  <img src="assets/screen-shots/v0.2.0/main-menu.png" width="30%" />
+  <img src="assets/screen-shots/v0.2.0/tl-menu.png" width="30%" />
+  <img src="assets/screen-shots/v0.2.0/t-menu.png" width="30%" />
+</p>
 
 ---
 
