@@ -1,15 +1,12 @@
 # python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
 
 # virtual environment
 venv/
 env/
 ENV/
 .venv
+.env
 
 # data files
 app/data/your_todo_data.json
@@ -22,14 +19,6 @@ app/data/exported_data/*
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
 
 # logs
 *.log
