@@ -28,7 +28,7 @@ class Task:
     def __str__(self) -> str:
         result = ""
         
-        width = 15  # the minimum size is 15 (for the banner to fit properly)
+        width = 13  # the minimum recommended size is 13
         name_chunk = (len(self.name) / width).__ceil__()
         desc_chank = (len(self.description) / width).__ceil__()
         bigger_chank = name_chunk if name_chunk>desc_chank else desc_chank
@@ -36,9 +36,15 @@ class Task:
         name_ptr = 0
         desc_ptr = 0
         middles_flag = False
-
+        status_flag = False
         for _ in range(bigger_chank):
-            result += 8*' '
+            result += 5 * ' '
+            if not status_flag:
+                result += "[+]" if self.task_status == Status.COMPLETED else "[ ]"
+                result += " "
+                status_flag = True
+            else:
+                result += "    "
             now_part = self.name[name_ptr:name_ptr+width]
             if(len(now_part) == 0):
                 result += width*' '
@@ -51,10 +57,10 @@ class Task:
             name_ptr+=width
 
             if(not middles_flag):
-                result+=f"({self.importance}/{Task.max_importance}) | [{self.task_status.name}] | "
+                result+=f"({self.importance}/{Task.max_importance}){' ' if self.importance < 10 else ''} | "
                 middles_flag = True
             else:
-                result+="        |                 | "
+                result+="        | "
 
             now_part = self.description[desc_ptr:desc_ptr+width]
             if(len(now_part) == 0):
@@ -117,7 +123,7 @@ class TaskList:
         
     def __str__(self) -> str:
         if(len(self.list_of_tasks)<=0):
-            return f" {self.name}: (empty)\n"
+            return f"  - {self.name}: (empty)\n"
         else:
             result = f"  - {self.name}:\n"
             for task in self.list_of_tasks:
@@ -215,4 +221,4 @@ class ToDoManager:
 if(__name__ == '__main__'):
     print("\nuse this file as module.\n")
 
-#MadMad_218
+#MadMad_224

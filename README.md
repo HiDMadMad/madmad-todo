@@ -1,11 +1,11 @@
-# MadMad ToDo App
+# CheckMate
 a simple and interactive CLI-based ToDo app built with Python.  
-Designed to help you manage multiple task lists and tasks with ease.
+designed to help you manage multiple task lists and tasks with ease.
 
 ---
 
 ## Version
-**Current Version:** `0.1.0 (MVP)`  
+**Current Version:** `0.2.0 (MVP)`  
 **Python:** >=3.10.0 (tested on 3.13.1)
 
 ---
@@ -23,13 +23,13 @@ Designed to help you manage multiple task lists and tasks with ease.
 
 ## Screenshots
 ### main menu
-![Main menu — محیط اصلی](assets/screen-shots/main_menu.png)
+![Main menu — محیط اصلی](assets/screen-shots/v0.2.0/main_menu.png)
 
 ### task list menu
-![Task list menu — منوی لیست‌ها](assets/screen-shots/tl_menu.png)
+![Task list menu — منوی لیست‌ها](assets/screen-shots/v0.2.0/tl_menu.png)
 
 ### task menu
-![Task menu — منوی تسک](assets/screen-shots/t_menu.png)
+![Task menu — منوی تسک](assets/screen-shots/v0.2.0/t_menu.png)
 
 ---
 
@@ -39,7 +39,7 @@ Designed to help you manage multiple task lists and tasks with ease.
    - **Name:** quick identifier
    - **Description:** detailed information
    - **Importance:** priority level (1-10)
-   - **Status:** completed ✓ or not completed ✗
+   - **Status:** completed [+] or not completed [ ]
 3. manage everything through simple numbered menus
 4. data automatically saves and loads between sessions 
 
@@ -47,19 +47,19 @@ Designed to help you manage multiple task lists and tasks with ease.
 
 ## Installation
 ```bash
-# Clone the repository
-git clone https://github.com/HiDMadMad/madmad-todo.git
-cd madmad-todo
+# clone the repository
+git clone https://github.com/HiDMadMad/check-mate.git
+cd check-mate
 
-# Install dependencies
+# install dependencies
 pip install -r requirements.txt
 
-# Run the app
+# run the app
 python app/app.py
 ```
 ---
 
-## Quick Start
+## Reference
 1. run the app: `python app/app.py`
 2. press 1 to create your first task list
 3. enter a name ("Work Tasks")
@@ -79,17 +79,19 @@ python app/app.py
 
 ## Project Structure
 ```
-madmad-todo/
+check-mate/
 ├── app/
 │   ├── app.py           # main entry point
 │   ├── models.py        # data models
-│   ├── ui.py            # user interface
+│   ├── core.py          # menus, I/O, data persistence
 │   ├── messages.py      # all messages
 │   └── data/
 │       ├── your_todo_data.json
 │       └── exported_data/
 ├── assets/
 │   └── screen-shots/
+        ├── v0.1.0
+        └── v0.2.0
 ├── .gitignore
 ├── LICENSE
 ├── README.md
