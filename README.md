@@ -2,7 +2,7 @@
 a simple and interactive CLI-based ToDo app built with Python.  
 designed to help you manage multiple task lists and tasks with ease.
 
-[![Version](https://img.shields.io/badge/version-0.1.0_(MVP)-green)](https://github.com/HiDMadMad/madmad-todo/releases)
+[![Version](https://img.shields.io/badge/version-0.2.0_(MVP)-green)](https://github.com/HiDMadMad/madmad-todo/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-yellow)](https://www.python.org/downloads/)
 
