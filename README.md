@@ -78,11 +78,15 @@ check-mate/
 │   ├── models.py        # data models
 │   ├── core.py          # menus, I/O, data persistence
 │   ├── messages.py      # all messages
+|   ├── update_exe.py    # exe build updater
 │   └── data/
 │       ├── your_todo_data.json
+|       ├── your_todo_data.json.backup
 │       └── exported_data/
 ├── assets/
 │   └── screen-shots/
+|       ├── icon.png
+|       ├── icon.ico
 |       ├── v0.1.0/
 |       └── v0.2.0/
 ├── .gitignore
