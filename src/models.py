@@ -174,7 +174,7 @@ class ToDoManager:
 
     def __str__(self) -> str:
         if(len(self.list_of_tasklists)<=0):
-            return "\n over view: (empty)\n"
+            return " over view: (empty)\n"
         result = ""
         for tasklist in self.list_of_tasklists:
             result+=(str(tasklist))
