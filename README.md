@@ -48,12 +48,12 @@ cd check-mate
 pip install -r requirements.txt
 
 # run the app
-python app/app.py
+python src/app.py
 ```
 ---
 
 ## Reference
-1. run the app: `python app/app.py`
+1. run the app: `python src/app.py`
 2. press 1 to create your first task list
 3. enter a name ("Work Tasks")
 4. press 3 to open the task list
@@ -73,7 +73,7 @@ python app/app.py
 ## Project Structure
 ```
 check-mate/
-├── app/
+├── src/
 │   ├── app.py           # main entry point
 │   ├── models.py        # data models
 │   ├── core.py          # menus, I/O, data persistence
