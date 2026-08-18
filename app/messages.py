@@ -23,7 +23,7 @@ PROGRESS = {
 MESSAGES = {
     "first welcome" : "hi {}, welcome to CheckMate!\n",
     #-------------------------------------------MENUS--------------------------------------------
-    "main menu" : "\n 0.toggle auto save (current:{})\n 1.create task list\n 2.display task lists\
+    "main menu" : " 0.toggle auto save (current:{})\n 1.create task list\n 2.display task lists\
                    \n 3.open task list\n 4.delete task list\n 5.export as Excel\n 6.export as CSV\
                    \n 7.import from CSV\n 8.save and exit\n ",
                    

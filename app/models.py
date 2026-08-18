@@ -123,7 +123,7 @@ class TaskList:
         
     def __str__(self) -> str:
         if(len(self.list_of_tasks)<=0):
-            return f"  - {self.name}: (empty)\n"
+            return f"  - {self.name}: (empty)\n\n"
         else:
             result = f"  - {self.name}:\n"
             for task in self.list_of_tasks:
@@ -174,7 +174,7 @@ class ToDoManager:
 
     def __str__(self) -> str:
         if(len(self.list_of_tasklists)<=0):
-            return "\n over view :\n   (empty)\n"
+            return "\n over view: (empty)\n"
         result = ""
         for tasklist in self.list_of_tasklists:
             result+=(str(tasklist))
