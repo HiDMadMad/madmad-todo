@@ -1,20 +1,24 @@
 # python
-__pycache__/
+pycache/
 
 # virtual environment
 venv/
-env/
-ENV/
 .venv
+
+# environment file
 .env
 
-# data files
+# build output
+CheckMate-v*/
+build_temp/
+*.spec
+
+# dev test data files
 src/data/your_todo_data.json
 src/data/your_todo_data.json.backup
-src/data/exported_data/*
-
+src/data/exported-data/*
 # keep directory structure but ignore contents
-!src/data/exported_data/.gitkeep
+!src/data/exported_data/.gitkeep  
 
 # IDE
 .vscode/
