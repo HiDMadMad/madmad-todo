@@ -40,7 +40,7 @@ designed to help you manage multiple task lists and tasks with ease.
 
 ## Installation
 ### 🖱️ Quick Start (Windows/Linux)
-1. download the latest release: [**CheckMate-v0.2.0**](https://github.com/0xMadMad/CheckMate/releases/latest)
+1. download the latest release: [**CheckMate-v0.2.0**](https://github.com/0xMadMad/check-mate/releases/latest)
 2. extract the downloaded zip and keep the data/ folder next to the builds
 4. run it directly. no installation or Python required
 
