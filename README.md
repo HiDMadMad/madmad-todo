@@ -39,6 +39,18 @@ designed to help you manage multiple task lists and tasks with ease.
 ---
 
 ## Installation
+### 🖱️ Quick Start (Windows/Linux)
+1. download the latest release: [**CheckMate-v0.2.0**](https://github.com/0xMadMad/CheckMate/releases/latest)
+2. extract the downloaded zip and keep the data/ folder next to the builds
+4. run it directly. no installation or Python required
+
+> on Linux, you may need to make the binary executable first:
+> ```
+> chmod +x CheckMate-v0.2.0
+> ./CheckMate-v0.2.0
+> ```
+
+### ⌨️ Run from Source
 ```bash
 # clone the repository
 git clone https://github.com/0xMadMad/check-mate.git
@@ -50,6 +62,7 @@ pip install -r requirements.txt
 # run the app
 python src/app.py
 ```
+
 ---
 
 ## Reference
@@ -78,15 +91,15 @@ check-mate/
 │   ├── models.py        # data models
 │   ├── core.py          # menus, I/O, data persistence
 │   ├── messages.py      # all messages
-|   ├── update_exe.py    # exe build updater
+|   ├── update_build.py  # build updater
 │   └── data/
 │       ├── your_todo_data.json
 |       ├── your_todo_data.json.backup
-│       └── exported_data/
+│       └── exported-data/
 ├── assets/
+|   ├── icon.png
+|   ├── icon.ico
 │   └── screen-shots/
-|       ├── icon.png
-|       ├── icon.ico
 |       ├── v0.1.0/
 |       └── v0.2.0/
 ├── .gitignore
