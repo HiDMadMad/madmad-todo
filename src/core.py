@@ -9,6 +9,7 @@ import csv
 from openpyxl import Workbook
 from openpyxl.styles import Alignment
 import shutil
+import sys
 
 
 
@@ -17,7 +18,10 @@ USER_PLATFORM = platform.system()
 USER_NAME = os.getlogin()
 COMP = '[X]'
 NCOMP = '[ ]'
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if getattr(sys, 'frozen', False):
+    BASE_DIR = os.path.dirname(sys.executable)
+else:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 DATA_FILE = os.path.join(DATA_DIR, "your_todo_data.json")
 DEFAULT_PATH = os.path.join(DATA_DIR, "exported-data")
